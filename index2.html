@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		img {
+			width: 400px;
+			position: absolute;
+			margin-left: 40%;
+			margin-top: 15%
+		}
+	</style>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<img src="fry.png" alt="" style="display: none" class="robot">
+	<img src="notrobot.jpg" alt="" style="display: none" class="notrobot">
+
+
+	<div class="mx-auto col-4 father" style="margin-top: 300px">
+		<h1>Прежде чем пройти дальше. Докажите нам что вы не робот.</h1>
+		<h1 class="text-danger">Введите номер  85763</h1>
+		<input class="pole" size="30">
+		<button class="send ">отправить</button>	
+	
+			
+	</div>
+
+	<script>
+		let pole = document.querySelector('.pole')
+		let send = document.querySelector('.send')
+
+		send.onclick = function(){
+			if ( pole.value==85763  ) {
+	        
+	         document.querySelector('.father').style.display='none'
+ 			document.querySelector('.notrobot').style.display='block'
+
+        } 
+        else {
+ 			
+ 			document.querySelector('.father').style.display='none'
+ 			document.querySelector('.robot').style.display='block'
+		}
+		}
+
+
+   
+
+	</script>
+</body>
+</html>
